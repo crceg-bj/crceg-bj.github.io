@@ -1,0 +1,93 @@
+<!--
+ * @Author: yanxin 332622154@qq.com
+ * @Date: 2022-08-16 00:33:02
+ * @LastEditors: yanxin 332622154@qq.com
+ * @LastEditTime: 2022-08-16 00:33:13
+ * @FilePath: /crceg-bj.github.io/index2-1.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+	<title>中国中铁-融媒矩阵</title>
+	<link rel="stylesheet" type="text/css" href="skin.css">
+	<script type="text/javascript" src="resource/jquery.min.js"></script>
+</head>
+<body style="background: url(img/bg3.png) no-repeat bottom left; background-size: 100%;">
+	<div class="header fixed" id="header">
+		<div class="con_w banner">
+			<img src="img/banner1.png" width="100%" alt="">
+		</div>
+		<div class="mkTab con_w">
+			<a class="item" href="index.html">中国中铁</a>
+			<a class="item on" href="index2-1.html">子企业</a>
+		</div>
+	</div>
+	<div class="con_w" id="content">
+		<ul class="ztLink noicon">
+			<!-- <li><a>中铁一局</a></li> -->
+		</ul>
+	</div>
+
+	<!-- 遮罩层 -->
+	<div class="gray">
+		<div class="shareCon">
+			<div class="logo"><img src="img/logo.png" alt=""></div>
+			<div class="share_link">
+				<p class="tit">中铁一局</p>
+				<ul class="link" id="gray_link">
+					<!-- <li><a href=""><img src="img/icon02.png" alt=""></a></li>
+					<li><a href=""><img src="img/icon03.png" alt=""></a></li>
+					<li><a href=""><img src="img/icon05.png" alt=""></a></li>
+					<li><a href=""><img src="img/icon06.png" alt=""></a></li> -->
+				</ul>
+			</div>
+			<div class="close"><svg t="1626421569132" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2204" width="20" height="20"><path d="M566.97558594 521.09667969L856.8828125 231.18945312c14.63378906-14.63378906 14.63378906-38.75976563 0-53.39355468l-1.58203125-1.58203125c-14.63378906-14.63378906-38.75976563-14.63378906-53.39355469 0L512 466.51660156 222.09277344 176.21386719c-14.63378906-14.63378906-38.75976563-14.63378906-53.39355469 0l-1.58203125 1.58203125c-15.02929688 14.63378906-15.02929688 38.75976563 0 53.39355469l289.90722656 289.90722656L167.1171875 811.00390625c-14.63378906 14.63378906-14.63378906 38.75976563 0 53.39355469l1.58203125 1.58203125c14.63378906 14.63378906 38.75976563 14.63378906 53.39355469 0L512 576.07226563 801.90722656 865.97949219c14.63378906 14.63378906 38.75976563 14.63378906 53.39355469 0l1.58203125-1.58203125c14.63378906-14.63378906 14.63378906-38.75976563 0-53.39355469L566.97558594 521.09667969z" fill="#ffffff" p-id="2205"></path></svg></div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="resource/rmjz.js"></script>
+<script type="text/javascript">
+var zqyLi = '';
+for(var i=0; i<zqyArr.length; i++){
+	var wx_link = zqyArr[i].link[0].weixin;
+	var wb_link = zqyArr[i].link[0].weibo;
+	var dy_link = zqyArr[i].link[0].douyin;
+	var tt_link = zqyArr[i].link[0].toutiao;
+	zqyLi += '<li data-wx="'+wx_link+'" data-wb="'+wb_link+'" data-dy="'+dy_link+'" data-tt="'+tt_link+'"><a>'+zqyArr[i].name+'</a></li>';
+}
+$(".ztLink.noicon").html(zqyLi);
+
+$(function(){
+	$(".ztLink.noicon li").click(function(){
+		var wxli='';
+		var wbli='';
+		var dyli='';
+		var ttli='';
+		$(".share_link .tit").text($(this).text());
+		//console.log($(this).attr('data-wx')+'\n'+$(this).attr('data-wb')+'\n'+$(this).attr('data-dy')+'\n'+$(this).attr('data-tt'))
+		if($(this).attr('data-wx')){
+			wxli = '<li><a href="'+$(this).attr('data-wx')+'"><img src="img/icon02.png" alt=""></a></li>';
+		}
+		if($(this).attr('data-wb')){
+			wbli = '<li><a href="'+$(this).attr('data-wb')+'"><img src="img/icon03.png" alt=""></a></li>';
+		}
+		if($(this).attr('data-dy')){
+			dyli = '<li><a href="'+$(this).attr('data-dy')+'"><img src="img/icon05.png" alt=""></a></li>';
+		}
+		if($(this).attr('data-tt')){
+			ttli = '<li><a href="'+$(this).attr('data-tt')+'"><img src="img/icon06.png" alt=""></a></li>';
+		}
+		$("#gray_link").html(wxli+wbli+dyli+ttli);
+		$(".gray").show();
+	});
+
+	$(".gray .close").click(function(){
+		$(".gray").hide();
+	})
+})
+	
+</script>
