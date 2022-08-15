@@ -1,0 +1,70 @@
+/* 去除苹果手机默认按钮样式 */
+input[type='button'], input[type='submit'], input[type='reset'], textarea { resize: none; -webkit-appearance: none; }
+
+/* 初始化 */
+html, body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, span, i, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: Microsoft YaHei, Arial; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; color: #555; border: none; -webkit-overflow-scrolling: touch; }
+html { font-size: 62.5%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { font-size: 1.4rem; position: relative; overflow-x: hidden; color: #555; background-color: #fff; }
+html, body { min-width: 320px; margin: 0 auto; max-width: 750px; overflow-x: hidden; height: 100%; overflow-y: auto; }
+input, button, select, textarea { outline: none; }
+em, i { font-style: normal; }
+strong { font-weight: normal; }
+.clearfix:after { display: block; visibility: hidden; clear: both; height: 0; content: ''; }
+.clearfix { zoom: 1; }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+img { border: none; }
+.fl { float: left; }
+.fr { float: right; }
+.con_w { width: 94%; margin: 0 auto; }
+.fixed { position: fixed; top: 0; left: 0; width: 100%; }
+.mkTab { display: flex; justify-content: space-between; margin-bottom: 3vw; margin-top: 3vw; border-radius: 4rem; overflow: hidden; border: 1px solid #0062b2; }
+.mkTab a { display: block; width: 50%; height: 4.3rem; text-align: center; line-height: 4.3rem; font-size: 2rem; background: #fff; color: #0062b2; }
+.mkTab a.on { background: #0062b2; color: #fff; box-shadow: 0 0 15px rgba(0,140,255,.25); }
+
+/* 头部样式  */
+#header { background: #fff; }
+#content { padding-top: calc(48vw + 4.3rem); padding-bottom: 20vw; }
+.banner img { display:  block; padding: 3vw 0 0; }
+
+/* 中国中铁 */
+.ztLink { display: flex; flex-wrap: wrap; justify-content: flex-start; }
+.ztLink li { width: 33.33%; text-align: center; margin-top: 2.6rem; }
+.ztLink li a { font-size: 1.4rem; line-height: 2em; color: #333; }
+.ztLink li img { width: 50%; border-radius: 50%; display: inline-block; box-shadow: 0 0 15px rgba(11,136,255,.6); }
+
+/* 子企业 */
+.zqyCon { height: calc(96vh - 45vw - 4.3rem); display: flex; justify-content: space-between; }
+.zqy_nav { width: calc(94vw * 0.3); }
+.zqy_nav_list li { padding: 0.5rem 0; min-height: 3rem; display: flex; justify-content: center; align-items: center; background: #e7eefd; margin-bottom: 0.5rem; }
+.zqy_nav_list li a { font-size: 1.1rem; line-height: 1.2em; text-align: center; color: #3a568d; }
+.zqy_nav_list li.on { background: #3771e0; box-shadow: 0 10px 10px #93b5f7; }
+.zqy_nav_list li.on a { color: #fff; font-size: 1.3rem; font-weight: bold; text-shadow: 1px 1px 1px #2551b3; }
+.zqy_link { width: 68%; box-shadow: 0 0 10px #93b5f7; border-radius: 8px; background: url(img/bg2.png) no-repeat center 6rem; background-size: 80%; overflow: auto;}
+.zqy_link_con { padding: 0 1rem; }
+.zqy_link_item { padding-bottom: 1rem; }
+.mkTit { font-size: 1.5rem; line-height: 3rem; background: url(img/tit_bg.png) no-repeat left bottom; background-size: auto 0.3rem; }
+.mkCon { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.mkCon a { display: inline-block; margin-top: 1rem; width: 46%; height: 3.3rem; line-height: 3.3rem; text-align: center; border: 1px solid #bfbfbf; border-radius: 3.3rem; background: #fff; color: #7d7d7d; }
+.zqy_link_item.bold .mkCon a { font-weight: bold; color: #000; }
+
+/* 子企业 */
+.noicon { justify-content: start; }
+.noicon li { width: 33.3%; }
+.noicon li a { display: inline-flex; box-shadow: 0 0 15px rgba(11,136,255,.6); width: calc(94vw * 0.333 * 0.6); height: calc(94vw * 0.333 * 0.6); border-radius: 50%; background: #0062b2; align-items: center; justify-content: center; color: #fff; line-height: 1.2em; }
+
+
+/* 遮罩层 */
+.gray { width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; background: rgba(0,0,0,.7); display: none; }
+.shareCon { width: 64vw; position: fixed; z-index: 2; background: #fff; left: 18vw; border-radius: 20px; top: 50%; margin-top: -40vw; }
+.shareCon .logo { background: #0062b2; border-radius: 20px 20px 0 0; text-align: center; padding: 1.6rem 0; }
+.shareCon .logo img { width: 48%; }
+.share_link { padding-top: 3rem; text-align: center; }
+.share_link .tit { font-size: 2.2rem; color: #333; }
+.share_link .link { display: flex; justify-content: center; padding: 3rem 0; }
+.share_link .link li { width: 23%; height: calc(width); }
+.share_link .link li a { display: block; }
+.share_link .link li img { width: 80%; border-radius: 50%; border: 1px solid #a2d5ff; }
+.close { width: 2rem; height: 2rem; position: absolute; right: -3rem; top: 0rem; }
