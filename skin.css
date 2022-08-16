@@ -64,7 +64,7 @@ img { border: none; }
 .share_link { padding-top: 3rem; text-align: center; }
 .share_link .tit { font-size: 2.2rem; color: #333; }
 .share_link .link { display: flex; justify-content: center; padding: 3rem 0; }
-.share_link .link li { width: 23%; height: calc(width); }
+.share_link .link li { width: 70%; height: calc(width); }
 .share_link .link li a { display: block; }
-.share_link .link li img { width: 80%; border-radius: 50%; border: 1px solid #a2d5ff; }
+.share_link .link li img { width: 100%; border: 1px solid #a2d5ff; }
 .close { width: 2rem; height: 2rem; position: absolute; right: -3rem; top: 0rem; }
